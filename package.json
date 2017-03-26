@@ -1,0 +1,36 @@
+{
+  "name": "laurel",
+  "version": "1.0.0",
+  "description": "forwards websocket packets to database",
+  "main": "index.js",
+  "scripts": {
+    "watch:test": "npm test -- -w",
+    "test": "mocha test --recursive",
+    "dash-gen": "node ./scripts/dash-gen.js"
+  },
+  "author": "Király Tamás (kiraly.tamas@outlook.com)",
+  "license": "MIT",
+  "dependencies": {
+    "binary-parser": "^1.1.5",
+    "config": "^1.25.1",
+    "flat": "^2.0.1",
+    "influx": "^5.0.6",
+    "ws": "^2.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "request": "^2.81.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tkiraly/laurel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tkiraly/laurel/issues"
+  },
+  "homepage": "https://github.com/tkiraly/laurel#readme"
+}
