@@ -150,7 +150,7 @@ function handleMod_list_full(json) {
     if (json.ok) {
         var points = json.mods.map(function (mod) {
             return {
-                measurement: config.get('measurementnames.modlisfull'),
+                measurement: config.get('measurementnames.modlistfull'),
                 tags: { deveui: mod.deveui },
                 fields: mod.attributes[0]
             }
