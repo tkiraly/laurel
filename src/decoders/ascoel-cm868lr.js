@@ -33,7 +33,7 @@ function decode(json) {
 
       return obj
     default:
-      console.log("unknown converter for " + JSON.stringify(json))
+      console.error("unknown converter for " + JSON.stringify(json))
       return {
         raw: {},
         main: {}
