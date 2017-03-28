@@ -46,7 +46,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "ascoel-co868lr-9",
+              "measurement": "ascoel-cm868lrth-9",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -64,7 +64,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "0e7e3464333061bf"
+                  "value": "0e7e34643330623b"
                 }
               ]
             }
@@ -149,7 +149,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "ascoel-co868lr-9",
+              "measurement": "ascoel-cm868lrth-9",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -167,7 +167,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "0e7e3464333061bf"
+                  "value": "0e7e34643330623b"
                 }
               ]
             }
@@ -175,7 +175,7 @@ var dash = {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Battery Level",
+          "title": "Humidity",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -191,109 +191,6 @@ var dash = {
           "yaxes": [
             {
               "format": "percent",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": true
-            },
-            {
-              "format": "short",
-              "label": null,
-              "logBase": 1,
-              "max": null,
-              "min": null,
-              "show": false
-            }
-          ]
-        }
-      ],
-      "repeat": null,
-      "repeatIteration": null,
-      "repeatRowId": null,
-      "showTitle": false,
-      "title": "Dashboard Row",
-      "titleSize": "h6"
-    },
-    {
-      "collapse": false,
-      "height": 250,
-      "panels": [
-        {
-          "aliasColors": {},
-          "bars": false,
-          "datasource": null,
-          "fill": 1,
-          "id": 3,
-          "legend": {
-            "alignAsTable": false,
-            "avg": false,
-            "current": false,
-            "max": false,
-            "min": false,
-            "rightSide": false,
-            "show": false,
-            "total": false,
-            "values": false
-          },
-          "lines": true,
-          "linewidth": 1,
-          "links": [],
-          "nullPointMode": "null",
-          "percentage": false,
-          "pointradius": 5,
-          "points": false,
-          "renderer": "flot",
-          "seriesOverrides": [],
-          "span": 12,
-          "stack": false,
-          "steppedLine": false,
-          "targets": [
-            {
-              "dsType": "influxdb",
-              "groupBy": [],
-              "measurement": "ascoel-co868lr-9",
-              "policy": "default",
-              "refId": "A",
-              "resultFormat": "time_series",
-              "select": [
-                [
-                  {
-                    "params": [
-                      "co2value"
-                    ],
-                    "type": "field"
-                  }
-                ]
-              ],
-              "tags": [
-                {
-                  "key": "deveui",
-                  "operator": "=",
-                  "value": "0e7e3464333061bf"
-                }
-              ]
-            }
-          ],
-          "thresholds": [],
-          "timeFrom": null,
-          "timeShift": null,
-          "title": "CO2",
-          "tooltip": {
-            "shared": true,
-            "sort": 0,
-            "value_type": "individual"
-          },
-          "type": "graph",
-          "xaxis": {
-            "mode": "time",
-            "name": null,
-            "show": true,
-            "values": []
-          },
-          "yaxes": [
-            {
-              "format": "ppm",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -379,7 +276,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "ascoel-co868lr-9",
+              "measurement": "ascoel-cm868lrth-9",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -397,7 +294,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "0e7e3464333061bf"
+                  "value": "0e7e34643330623b"
                 }
               ]
             }
@@ -453,7 +350,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "ascoel-co868lr-9",
+              "measurement": "ascoel-cm868lrth-9",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -471,7 +368,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "0e7e3464333061bf"
+                  "value": "0e7e34643330623b"
                 }
               ]
             }
@@ -479,7 +376,7 @@ var dash = {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Battery",
+          "title": "Battery Level",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -556,7 +453,7 @@ var dash = {
     ]
   },
   "timezone": "browser",
-  "title": "Ascoel CO868LR",
+  "title": "Ascoel CM868LRTH",
   "version": 0
 }
 
