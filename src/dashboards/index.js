@@ -5,5 +5,8 @@ module.exports = [
     require('./ascoel-th868lr'),
     require('./ascoel-co868lr'),
     r('4776e6ed0020004c','otthon'),
-    r('4786e6ed003d001c','iroda')
+    r('4786e6ed003d001c','iroda'),
+    require('./globalsat-ls111'),
+    require('./globalsat-ls112'),
+    require('./globalsat-ls113')
 ]

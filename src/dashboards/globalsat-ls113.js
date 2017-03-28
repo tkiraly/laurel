@@ -46,7 +46,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "risinghf-rhf0s001-8",
+              "measurement": "globalsat-ls113-2",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -64,7 +64,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "4776e6ed0020004c"
+                  "value": "000db5311274355f"
                 }
               ]
             }
@@ -149,7 +149,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "risinghf-rhf0s001-8",
+              "measurement": "globalsat-ls113-2",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -167,7 +167,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "4776e6ed0020004c"
+                  "value": "000db5311274355f"
                 }
               ]
             }
@@ -250,7 +250,7 @@ var dash = {
             {
               "dsType": "influxdb",
               "groupBy": [],
-              "measurement": "risinghf-rhf0s001-8",
+              "measurement": "globalsat-ls113-2",
               "policy": "default",
               "refId": "A",
               "resultFormat": "time_series",
@@ -258,7 +258,7 @@ var dash = {
                 [
                   {
                     "params": [
-                      "battery"
+                      "pm25density"
                     ],
                     "type": "field"
                   }
@@ -268,7 +268,7 @@ var dash = {
                 {
                   "key": "deveui",
                   "operator": "=",
-                  "value": "4786e6ed003d001c"
+                  "value": "000db5311274355f"
                 }
               ]
             }
@@ -276,7 +276,7 @@ var dash = {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Battery",
+          "title": "PM2.5 density",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -291,10 +291,10 @@ var dash = {
           },
           "yaxes": [
             {
-              "format": "volt",
+              "format": "ppm",
               "label": null,
               "logBase": 1,
-              "max": 4,
+              "max": null,
               "min": 0,
               "show": true
             },
@@ -353,15 +353,8 @@ var dash = {
     ]
   },
   "timezone": "browser",
-  "title": "RisingHF RHF0S001-",
+  "title": "Globalsat LS113",
   "version": 0
 }
 
-module.exports = function (deveui, titlepostfix) {
-  var d = JSON.parse(JSON.stringify(dash))
-  d.rows[0].panels[0].targets[0].tags[0].value = deveui
-  d.rows[1].panels[0].targets[0].tags[0].value = deveui
-  d.rows[2].panels[0].targets[0].tags[0].value = deveui
-  d.title += titlepostfix
-  return d
-}
+module.exports = dash

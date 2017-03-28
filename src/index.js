@@ -133,6 +133,7 @@ function handleGateways_info(json) {
             let dcup = gw.duty_cycle_used_percent
             delete gw.duty_cycle_used_percent
             gw.duty_cycle_used_percent = parseFloat(dcup.slice(0, dcup.length - 1)) || 0
+            gw.ts = moment().unix()
             return {
                 measurement: config.get('measurementnames.gateways'),
                 tags: { id: id1 },

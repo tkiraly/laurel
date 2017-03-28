@@ -1,5 +1,6 @@
 const request = require('request')
 const dashboards = require('../src/dashboards')
+const config = require('config')
 
 publish(dashboards, 0, publish)
 
@@ -7,11 +8,11 @@ function publish(objlist, index, next) {
     var obj = objlist[index]
     index++
     request({
-        url: 'http://localhost:3000/api/dashboards/db',
+        url: config.get('dash-gen.url'),
         method: 'POST',
         json: { dashboard: obj, overwrite: true },
         auth:{
-            bearer: 'eyJrIjoiOHQ2cjhsQk4ybTU2eVNONDBCR3d4VERyeHNBWkR0a0wiLCJuIjoiZ2ciLCJpZCI6MX0='
+            bearer: config.get('dash-gen.token')
         }
     }, function createResponseHandler(createErr, createResp) {
         if (createErr) {
