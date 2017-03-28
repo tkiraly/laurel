@@ -30,7 +30,8 @@ function decode(json) {
     raw: obj,
     main: {
       temperature: obj.temperature,
-      humidity: obj.humidity
+      humidity: obj.humidity,
+      battery: obj.battery
     }
   }
 
