@@ -17,7 +17,7 @@ influx.getDatabaseNames()
                 .then(function () {
                     console.log(config.get('influx.databasename') + " database is created")//fulfilled
                 }, function (reason) {
-                    console.log(`${reason}`)//rejected
+                    console.error(`${reason}`)//rejected
                 })
         }
     })
@@ -79,7 +79,7 @@ function handlePush(json) {
     //   "ts": 1489005602
     // }
     if (!devices[json.deveui]) {
-        console.log('from handlePush unknown deveui: ' + json.deveui)
+        console.info('from handlePush unknown deveui: ' + json.deveui)
         return
     }
 
@@ -110,7 +110,7 @@ function sendmodlog(obj) {
     }
     Object.assign(logpacket, obj)
     if (ws.readyState !== ws.OPEN) {
-        console.log('mod_log not sent, websocket is closed')
+        console.error('mod_log not sent, websocket is closed')
         return
     }
     ws.send(JSON.stringify(logpacket))
@@ -150,7 +150,7 @@ function handleMod_list_full(json) {
     if (json.ok) {
         var points = json.mods.map(function (mod) {
             return {
-                measurement: config.get('measurementnames.modlisfull'),
+                measurement: config.get('measurementnames.modlistfull'),
                 tags: { deveui: mod.deveui },
                 fields: mod.attributes[0]
             }
