@@ -175,7 +175,7 @@ var dash = {
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "Battery Level",
+          "title": "Humidity",
           "tooltip": {
             "shared": true,
             "sort": 0,
