@@ -1,5 +1,6 @@
 var r = require('./risinghf-rhf0s001')
 var gw = require('./gateway')
+var tbs100 = require('./turboes-tbs-100')
 
 module.exports = [
     require('./adeunis-pulse'),
@@ -8,6 +9,8 @@ module.exports = [
     require('./ascoel-cm868lrth'),
     r('4776e6ed0020004c', 'otthon'),
     r('4786e6ed003d001c', 'iroda'),
+    tbs100('0128680000000004', 'mohanet'),
+    tbs100('0128680000000005', 'iroda'),
     require('./globalsat-ls111'),
     require('./globalsat-ls112'),
     require('./globalsat-ls113'),
