@@ -20,6 +20,7 @@ describe('risinghf', function () {
             main: {
                 temperature: 24.82582763671875,
                 humidity: 70.66015625,
+                battery: 3.5
             }
         }
         var converter = require('../../src/decoders/risinghf-rhf0s001')
